@@ -1,0 +1,113 @@
+@import url('/src/reset.css');
+
+.app-wrapper {
+  width: 1544px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  header {
+    width: 100%;
+    height: 80px;
+  }
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .menu__left-part,
+    .menu__right-part {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    & .menu__list {
+      padding-left: 80px;
+      .list__item {
+        margin-right: 59px;
+        padding: 14px 0;
+      }
+      .list__item_active {
+        font-weight: 600;
+        border-bottom: 2px solid #5243c2;
+        padding-bottom: 12px;
+      }
+    }
+    .menu__call {
+      background-color: #ffeded;
+      border-radius: 15px;
+      color: #ff4d4f;
+      display: flex;
+      align-items: center;
+      padding: 6px 12px;
+      margin-right: 60px;
+      img {
+        margin-right: 4px;
+      }
+    }
+    .menu__phone {
+      font-weight: 600;
+    }
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    height: 850px;
+    .content__text {
+      font-weight: 700;
+      font-size: 72px;
+    }
+    .content__button {
+      width: 180px;
+      height: 180px;
+      background-color: #5243c2;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 800;
+      border-radius: 180px;
+      position: absolute;
+      left: 600px;
+      bottom: 200px;
+      z-index: 1;
+      &:hover {
+        color: #5243c2;
+        background-color: #fff;
+        outline: 2px solid #5243c2;
+      }
+    }
+    .content__bg {
+      height: 850px;
+      position: absolute;
+      right: -100px;
+      top: 0;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer__list-item {
+      padding: 0 4px;
+      &:last-child {
+        border-left: 1px solid black;
+      }
+    }
+  }
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  a {
+    text-decoration: none;
+    color: none;
+    &:hover,
+    &:active,
+    &:visited {
+      color: inherit;
+    }
+  }
+}

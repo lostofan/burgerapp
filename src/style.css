@@ -1,0 +1,173 @@
+@import url("/src/reset.css");
+.app-wrapper {
+  width: 1544px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.app-wrapper header {
+  width: 100%;
+  height: 80px;
+}
+
+.app-wrapper .menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-wrapper .menu .menu__left-part,
+.app-wrapper .menu .menu__right-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-wrapper .menu .menu__list {
+  padding-left: 80px;
+}
+
+.app-wrapper .menu .menu__list .list__item {
+  margin-right: 59px;
+  padding: 14px 0;
+}
+
+.app-wrapper .menu .menu__list .list__item_active {
+  font-weight: 600;
+  border-bottom: 2px solid #5243c2;
+  padding-bottom: 12px;
+}
+
+.app-wrapper .menu .menu__call {
+  background-color: #ffeded;
+  border-radius: 15px;
+  color: #ff4d4f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 12px;
+  margin-right: 60px;
+}
+
+.app-wrapper .menu .menu__call img {
+  margin-right: 4px;
+}
+
+.app-wrapper .menu .menu__phone {
+  font-weight: 600;
+}
+
+.app-wrapper .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  height: 850px;
+}
+
+.app-wrapper .content .content__text {
+  font-weight: 700;
+  font-size: 72px;
+}
+
+.app-wrapper .content .content__button {
+  width: 180px;
+  height: 180px;
+  background-color: #5243c2;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  border-radius: 180px;
+  position: absolute;
+  left: 600px;
+  bottom: 200px;
+  z-index: 1;
+}
+
+.app-wrapper .content .content__button:hover {
+  color: #5243c2;
+  background-color: #fff;
+  outline: 2px solid #5243c2;
+}
+
+.app-wrapper .content .content__bg {
+  height: 850px;
+  position: absolute;
+  right: -100px;
+  top: 0;
+}
+
+.app-wrapper .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-wrapper .footer .footer__list-item {
+  padding: 0 4px;
+}
+
+.app-wrapper .footer .footer__list-item:last-child {
+  border-left: 1px solid black;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+}
+
+.list a {
+  text-decoration: none;
+  color: none;
+}
+
+.list a:hover, .list a:active, .list a:visited {
+  color: inherit;
+}
+/*# sourceMappingURL=style.css.map */
