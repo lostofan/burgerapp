@@ -1,0 +1,128 @@
+@import 'variables.scss';
+
+/* @media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 479px) {
+  html {
+    font-size: 6px;
+  }
+} */
+@media (min-width: 590px) {
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 55%;
+  }
+  .burger__menu {
+    display: none;
+  }
+  .menu__phone {
+    display: flex;
+  }
+}
+
+@media (max-width: 589px) {
+  .menu__list {
+    display: none;
+    flex-basis: 1px;
+  }
+  .menu__phone {
+    display: none;
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .burger__menu {
+    display: flex;
+  }
+}
+
+header {
+  width: 100%;
+}
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .menu__logo {
+    width: 5vw;
+  }
+  .menu__list {
+    .list__item {
+      padding: 1vh 2% 1vh;
+      @include font(0.8rem, 400, $primblack);
+    }
+    .list__item_active {
+      font-weight: 600;
+      border-bottom: 0.2vw solid $primblue;
+      padding-bottom: 0.6vw;
+    }
+  }
+  .menu__call {
+    background-color: $red200;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0.5% 0.5%;
+    @include font(0.8rem, 600, $primdanger);
+
+    img {
+      margin-right: 4px;
+      width: 1vw;
+    }
+  }
+  .menu__phone {
+    @include font(0.8rem, 600, $primblack);
+  }
+  .burger_on {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 1vh;
+    list-style: none;
+    order: 6;
+    flex-basis: 100%;
+    text-align: center;
+    z-index: 5;
+    background-color: #fff;
+  }
+  .phone {
+    order: 4;
+  }
+
+  .burger__menu {
+    background-color: $primtitan;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+}

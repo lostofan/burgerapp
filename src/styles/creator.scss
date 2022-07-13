@@ -1,0 +1,47 @@
+@import 'variables.scss';
+@media (min-width: 480px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 479px) {
+  .content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.content {
+  width: 100%;
+  display: flex;
+  .content__burger {
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .content__background {
+      position: absolute;
+      z-index: -1;
+    }
+    .content__gift {
+      position: absolute;
+      z-index: 800;
+      right: -40%;
+      bottom: -20px;
+      display: none;
+      flex-direction: row;
+      align-items: center;
+      user-select: none;
+      @include font(1rem, 600, $primblack);
+      span {
+        color: $primdanger;
+      }
+    }
+    .content__bun {
+      color: $primdanger;
+      width: 100%;
+    }
+  }
+}

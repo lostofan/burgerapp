@@ -1,0 +1,33 @@
+@import 'variables.scss';
+
+@media (min-width: 768px) {
+  .content__button {
+    @include font(1.2rem, 800, $primwhite);
+  }
+}
+@media (max-width: 767px) {
+  .content__button {
+    @include font(0.75rem, 800, $primwhite);
+  }
+}
+.content__button {
+  background-color: $primblue;
+  border: none;
+  position: absolute;
+  right: 50%;
+  bottom: 20%;
+  width: 9vw;
+  height: 9vw;
+  border-radius: 9vw;
+  text-align: center;
+  &:hover {
+    color: $primblue;
+    background-color: $primwhite;
+    outline: 2px solid $primblue;
+  }
+}
+.content__bg {
+  max-height: 80%;
+  max-width: 60%;
+  margin-right: -3vw;
+}

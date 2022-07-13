@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+//Основные цвета
+$primblue: #5243c2;
+$primdanger: #ff4d4f;
+$primblack: #1f2939;
+$primmuted: #949ba6;
+$primtitan: #f5f5ff;
+$primsqueeze: #f0f7fa;
+$primwhite: #fff;
+
+//Дополнительные цвета
+$red500: #ff4d4f;
+$red400: #ff9293;
+$red300: #ffc8c8;
+$red200: #ffeded;
+
+$indigo600: #473aa6;
+$indigo500: #5243c2;
+
+$gray200: #d4d4d4;
+$gray100: #f4f4f4;
+
+//Шрифт
+$ff: 'Open Sans', sans-serif;
+
+@mixin font($fs, $fw, $col) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $col;
+}

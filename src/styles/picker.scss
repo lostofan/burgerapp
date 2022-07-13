@@ -1,0 +1,68 @@
+@import 'variables.scss';
+
+@media (min-width: 1200px) {
+  .picker__item {
+    flex-basis: 8%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .picker__item {
+    flex-basis: 100% / 4%;
+  }
+}
+
+@media (max-width: 479px) {
+  .picker__item {
+    flex-basis: 100% / 2;
+  }
+}
+
+.content__picker {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .picker__item {
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw 1vw;
+    outline: 2px solid $primsqueeze;
+    border-radius: 30px;
+    .picker__img {
+      max-width: 10vw;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 12px;
+    }
+    .picker__name {
+      padding-bottom: 10%;
+      @include font(0.7rem, 600, $primblack);
+    }
+    .picker__control {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      @include font(1rem, 600, $primblack);
+      button {
+        width: 28px;
+        height: 28px;
+        color: $primblue;
+        font-size: 1.25rem;
+        background-color: $primtitan;
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
