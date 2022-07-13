@@ -4,19 +4,26 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  .content__burger {
+    width: 30vw;
+    height: 30vw;
+  }
 }
 @media (max-width: 479px) {
   .content {
     flex-direction: column;
     justify-content: flex-start;
   }
+  .content__burger {
+    margin-top: 30px;
+    width: 60vw;
+    height: 60vw;
+  }
 }
 .content {
   width: 100%;
   display: flex;
   .content__burger {
-    width: 30vw;
-    height: 30vw;
     position: relative;
     display: flex;
     flex-direction: column;
