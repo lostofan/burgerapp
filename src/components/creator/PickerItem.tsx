@@ -16,13 +16,16 @@ price: number;
 const PickerItem:React.FC<PickerItemProps> = ({name, icon, counter, oz, kcal, price}) => {
  const dispatch = useAppDispatch();
  const isFinished = useAppSelector(state => state.ingCounter.isFinished);
+
+ const func = () => {
+  dispatch(subIngCounter({counter, name, oz, kcal, price}))
+ }
 return (
   <div className="picker__item">
         <div className="picker__img"><img src={require(`../../imgs/${icon}`)} alt="" /></div>
         <div className="picker__name">{name}</div>
         <div className="picker__control">
-          <button onClick={() => 
-              dispatch(subIngCounter({counter, name, oz, kcal, price}))} 
+          <button onClick={func} 
               disabled={(counter <= 0 || isFinished) ? true : false}>
                 –
           </button>
