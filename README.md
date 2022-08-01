@@ -13,4 +13,4 @@ Create your burger app
 https://proninburgerapp.herokuapp.com/
 
 # TO DO:
-Adaptive design
+~~Adaptive design~~
