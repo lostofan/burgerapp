@@ -1,11 +1,30 @@
 @import 'variables.scss';
+
+@media (min-width: 479px) {
+  .modal {
+    width: 40%;
+  }
+  .modal__input {
+    width: 40%;
+  }
+}
+
+@media (max-width: 479px) {
+  .modal {
+    width: 90%;
+  }
+  .modal__input {
+    width: 30%;
+  }
+}
+
 body {
   position: relative;
 }
 .modal__wrapper {
   z-index: 900;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: rgba(82, 67, 194, 0.9);
   position: fixed;
   left: 0;
@@ -19,7 +38,6 @@ body {
     flex-direction: column;
     background-color: #fff;
     border-radius: 20px;
-    width: 608px;
     .modal__article {
       display: flex;
       justify-content: space-between;
@@ -38,11 +56,10 @@ body {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       border-bottom: 2px solid $primtitan;
       .modal__input {
         border: none;
-        width: 250px;
         outline: 1px solid $primtitan;
         border-radius: 15px;
         margin: 16px;

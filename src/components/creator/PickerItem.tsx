@@ -12,9 +12,11 @@ price: number;
 
 }
 
-
 const PickerItem:React.FC<PickerItemProps> = ({name, icon, counter, oz, kcal, price}) => {
  const dispatch = useAppDispatch();
+ const func = () => {
+  dispatch(addIngCounter({counter, name, oz, kcal, price}));
+}
  const isFinished = useAppSelector(state => state.ingCounter.isFinished);
 return (
   <div className="picker__item">
@@ -28,7 +30,7 @@ return (
           </button>
           <div>{counter}</div>
           <button 
-            onClick={() => dispatch(addIngCounter({counter, name, oz, kcal, price}))}
+            onClick={func}
             disabled={(isFinished) ? true : false}>
               +
           </button>

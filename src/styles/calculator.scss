@@ -1,5 +1,10 @@
 @import 'variables.scss';
 
+@media (min-width: 1200px) {
+  .calc {
+    width: 800px;
+  }
+}
 @media (min-width: 480px) {
   .calc__counter {
     border-radius: 40px;
@@ -9,7 +14,7 @@
     width: 30%;
   }
   .calc {
-    width: 20vw;
+    width: 30%;
   }
 }
 @media (max-width: 479px) {
@@ -33,7 +38,7 @@
     width: 40%;
   }
   .calc {
-    width: 50vw;
+    width: 100%;
   }
 }
 
