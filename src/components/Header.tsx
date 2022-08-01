@@ -1,8 +1,8 @@
 import logo from "../../src/imgs/logo.png"
 import phone from "../../src/imgs/phoneico.png"
 import { NavLink } from 'react-router-dom';
-import burger from "../imgs/menubtn.png";
-import close from "../imgs/close.png"
+import burger from "../imgs/menubtn.svg";
+import close from "../imgs/close.svg"
 
 import "../styles/header.scss"
 import { useState } from "react";
