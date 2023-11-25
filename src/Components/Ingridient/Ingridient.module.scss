@@ -1,0 +1,29 @@
+.root {
+  width: 90%;
+  margin-bottom: -10%;
+  &:first-child {
+    margin-bottom: -10%;
+  }
+}
+.cutlet {
+  margin-bottom: -6%;
+  margin-top: -5%;
+}
+.cheese {
+  margin-bottom: -12%;
+}
+.salad {
+  margin-bottom: -7%;
+  margin-top: -8%;
+}
+.mayo {
+  margin-bottom: -9%;
+}
+.cucumber,
+.onion,
+.tomato {
+  margin-bottom: -3%;
+}
+.topbun {
+  margin-bottom: -4%;
+}

@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: $primblue;
+  width: 10vw;
+  height: 10vw;
+  padding: 15px;
+  border: none;
+  border-radius: 100%;
+  text-align: center;
+  @include font(1.2rem, 800, $primwhite);
+  &:hover {
+    color: $primblue;
+    background-color: $primwhite;
+    outline: 2px solid $primblue;
+  }
+}

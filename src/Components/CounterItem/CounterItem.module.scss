@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+.root {
+  width: 125px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .value {
+    @include font(0.7rem, 600, $primblack);
+    margin-left: 6%;
+  }
+}

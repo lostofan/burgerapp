@@ -1,24 +1,5 @@
 @import url('reset.css');
 @import 'variables.scss';
-
-@media (min-width: 1200px) {
-  html {
-    font-size: 20px;
-  }
-}
-/*
-  @media (min-width: 992px) and (max-width: 1199px) {
-    html {
-      font-size: 15px;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 991px) {
-    html {
-      font-size: 12px;
-    }
-  }
-*/
 @media (min-width: 480px) {
   html {
     font-size: 1.2vw;
@@ -31,6 +12,18 @@
   }
 }
 
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+input {
+  all: unset;
+}
+a {
+  all: unset;
+  cursor: pointer;
+}
 html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
@@ -38,36 +31,13 @@ html {
   max-width: 1920px;
   margin: auto;
 }
-
+body {
+  position: relative;
+}
 button {
+  all: unset;
   border: none;
   &:hover {
     cursor: pointer;
-  }
-}
-.app-wrapper {
-  margin: 0 10%;
-  main {
-    width: 100%;
-  }
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-    .content__text {
-      @include font(3.1rem, 700, $primblack);
-      line-height: 100%;
-    }
-  }
-  a {
-    text-decoration: none;
-    color: none;
-    &:hover,
-    &:active,
-    &:visited {
-      color: inherit;
-    }
   }
 }

@@ -1,0 +1,12 @@
+@import '../../../styles/variables.scss';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  .bg {
+    max-height: 90vh;
+  }
+}

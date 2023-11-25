@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+.root {
+  flex-basis: 280px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  outline: 1px solid $primtitan;
+  border-radius: 15px;
+  padding: 8px 16px;
+  border: 1px solid $primtitan;
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    .title {
+      @include font(12px, 400, $primmuted);
+    }
+    .input {
+      width: 220px;
+      @include font(14px, 600, $primblack);
+    }
+  }
+}

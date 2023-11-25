@@ -1,0 +1,27 @@
+@import '/src/styles/variables.scss';
+.root {
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    .listItem {
+      @include font(0.8rem, 400, $primblack);
+    }
+    .listItem_active {
+      font-weight: 600;
+      border-bottom: 0.2vw solid $primblue;
+      padding-bottom: 0.6vw;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .root {
+    .list {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

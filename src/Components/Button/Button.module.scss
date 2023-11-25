@@ -1,0 +1,58 @@
+@import '/src/styles/variables.scss';
+
+.call {
+  background-color: $red200;
+  padding: 6px 12px;
+  height: 32px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  @include font(0.8rem, 600, $primdanger);
+  margin-left: auto;
+  img {
+    margin-right: 4px;
+  }
+}
+@media (max-width: 768px) {
+  .call {
+    margin-left: 0;
+  }
+}
+.mainBtn {
+  @include font(0.8rem, 600, $primtitan);
+  padding: 16px 40px;
+  background-color: $primblue;
+  border-radius: 30px;
+  &:hover {
+    outline: 1px solid $primblue;
+    color: $primblue;
+    background-color: $primtitan;
+  }
+  &:disabled {
+    background-color: $primtitan;
+    color: $primblue;
+    &:hover {
+      color: $primblack;
+      outline: 1px solid $primblack;
+    }
+  }
+}
+.picker {
+  color: $primblue;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: $primtitan;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+}
+.close {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.25rem;
+  color: black;
+}

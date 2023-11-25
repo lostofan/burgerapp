@@ -1,0 +1,12 @@
+@import '/src/styles/variables.scss';
+.appWrapper {
+  margin: 0 50px;
+  main {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .app-wrapper {
+    margin: 0 15px;
+  }
+}

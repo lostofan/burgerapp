@@ -1,0 +1,37 @@
+@import '../../styles/variables.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  .title {
+    @include font(1.8rem, 600, $primblack);
+    border-bottom: 2px solid #f5f5ff;
+    margin-bottom: 24px;
+  }
+  .sum {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .value {
+      @include font(1.8rem, 800, $primblue);
+    }
+  }
+  .control {
+    display: flex;
+    gap: 30px;
+    .finish_btn {
+      @include font(0.9rem, 600, $primblack);
+      background-color: $primtitan;
+      border-radius: 20px;
+      padding: 4%;
+      outline: 2px solid $primblue;
+    }
+  }
+  .promo {
+    @include font(0.7rem, 400, $primblack);
+    margin-bottom: 5%;
+    span {
+      color: $primdanger;
+    }
+  }
+}

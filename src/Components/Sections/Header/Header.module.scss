@@ -1,0 +1,30 @@
+@import '/src/styles/variables.scss';
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  height: 80px;
+  .contacts {
+    @include font(0.8rem, 600, $primblack);
+  }
+}
+@media (max-width: 900px) {
+  .root {
+    .nav {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .root {
+    justify-content: space-between;
+    .contacts {
+      display: none;
+    }
+    .logo {
+      width: 50px;
+    }
+  }
+}

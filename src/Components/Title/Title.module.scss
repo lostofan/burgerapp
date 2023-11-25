@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+.root {
+  @include font(3.1rem, 700, $primblack);
+  line-height: 100%;
+  @media (max-width: 480px) {
+    display: none;
+  }
+}

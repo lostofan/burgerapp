@@ -1,0 +1,10 @@
+@import '/src/styles/variables.scss';
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  background-color: $primtitan;
+  padding: 16px;
+  border-radius: 32px;
+}

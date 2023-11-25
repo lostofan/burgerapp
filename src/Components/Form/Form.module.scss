@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid $primtitan;
+  border-bottom: 2px solid $primtitan;
+  .inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}

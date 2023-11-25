@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    height: 600px;
+  }
+}
