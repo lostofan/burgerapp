@@ -15,3 +15,7 @@ Create your burger app
 
 # TO DO:
 ~~Adaptive design~~
+Адаптив
+Переделать логику
+Переделать редукс
+Сделать ридми
