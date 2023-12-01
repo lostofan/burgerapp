@@ -4,7 +4,11 @@ import { ICounterItemProps } from './CounterItem.type';
 export const CounterItem: FC<ICounterItemProps> = ({ type, children }) => {
   return (
     <div className={style.root}>
-      <img className={style.icon} src={require(`../../Assets/imgs/${type}ico.png`)} alt="" />
+      <img
+        className={style.icon}
+        src={require(`../../Assets/imgs/counter/${type}ico.png`)}
+        alt=""
+      />
       <span className={style.value}>{children}</span>
     </div>
   );

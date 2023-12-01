@@ -2,21 +2,23 @@ import React from 'react';
 import { useAppSelector } from '../../redux/hook';
 import style from './Picker.module.scss';
 import { PickerItem } from '../PickerItem';
+import { selectIngridients } from '../../redux/ingridientCounterSlice';
 export const Picker = () => {
-  const ingridients = useAppSelector((state) => state.ingCounter.ingridients);
+  const ingridients = useAppSelector(selectIngridients);
 
   return (
     <div className={style.root}>
       {Object.entries(ingridients).map(([key, value], i) => (
-        <PickerItem
-          name={key}
-          icon={key.toLowerCase() + '.png'}
-          counter={value.count}
-          key={i}
-          oz={value.oz}
-          kcal={value.kcal}
-          price={value.price}
-        />
+        <div className={style.item} key={i}>
+          <PickerItem
+            name={key}
+            icon={key.toLowerCase() + '.png'}
+            counter={value.count}
+            oz={value.oz}
+            kcal={value.kcal}
+            price={value.price}
+          />
+        </div>
       ))}
     </div>
   );

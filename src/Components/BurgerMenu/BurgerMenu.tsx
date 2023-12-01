@@ -5,11 +5,9 @@ interface IBurgerMenuProps {
   menuActive: boolean;
 }
 export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ menuActive }) => {
-  return menuActive ? (
-    <div className={style.root}>
+  return (
+    <div className={menuActive ? style.root : style.hidden}>
       <Nav />
     </div>
-  ) : (
-    <></>
   );
 };

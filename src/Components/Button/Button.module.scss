@@ -7,7 +7,7 @@
   border-radius: 30px;
   display: flex;
   align-items: center;
-  @include font(0.8rem, 600, $primdanger);
+  @include font(14px, 600, $primdanger);
   margin-left: auto;
   img {
     margin-right: 4px;
@@ -19,8 +19,8 @@
   }
 }
 .mainBtn {
-  @include font(0.8rem, 600, $primtitan);
-  padding: 16px 40px;
+  @include font(16px, 600, $primtitan);
+  padding: 16px 30px;
   background-color: $primblue;
   border-radius: 30px;
   &:hover {
@@ -35,6 +35,22 @@
       color: $primblack;
       outline: 1px solid $primblack;
     }
+  }
+}
+.summary {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  background-color: $primblue;
+  border-radius: 25px;
+  @include font(18px, 600, $primwhite);
+  outline: 1px solid $primwhite;
+  padding: 5px;
+  z-index: 100;
+  &:hover {
+    color: $primblue;
+    outline-color: $primblue;
+    background-color: $primwhite;
   }
 }
 .picker {
@@ -53,6 +69,6 @@
 }
 .close {
   background-color: rgba(0, 0, 0, 0);
-  font-size: 1.25rem;
+  font-size: 36px;
   color: black;
 }

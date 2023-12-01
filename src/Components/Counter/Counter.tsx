@@ -2,9 +2,10 @@ import React from 'react';
 import style from './Counter.module.scss';
 import { CounterItem } from '../CounterItem';
 import { useAppSelector } from '../../redux/hook';
+import { selectCalc } from '../../redux/ingridientCounterSlice';
 
 export const Counter = () => {
-  const calculated = useAppSelector((state) => state.ingCounter.calc);
+  const calculated = useAppSelector(selectCalc);
   return (
     <div className={style.root}>
       <CounterItem type="time">0 min</CounterItem>

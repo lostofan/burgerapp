@@ -1,8 +1,8 @@
 @import '../../styles/variables.scss';
 .root {
-  @include font(3.1rem, 700, $primblack);
+  @include font(clamp(3rem, 0.5rem + 3.3333vw, 4.5rem), 700, $primblack);
   line-height: 100%;
-  @media (max-width: 480px) {
+  @media (max-width: 1280px) {
     display: none;
   }
 }

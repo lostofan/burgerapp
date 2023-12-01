@@ -1,12 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import ingridientCounterReducer from "./ingridientCounterSlice";
-import showModalSlice from "./showModalSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import ingridientCounterReducer from './ingridientCounterSlice';
 
 export const store = configureStore({
-    reducer: {
-        ingCounter: ingridientCounterReducer,
-        showModal: showModalSlice
-    }
+  reducer: {
+    ingridientCounter: ingridientCounterReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

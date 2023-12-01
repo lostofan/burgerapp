@@ -1,11 +1,20 @@
 import React from 'react';
 import style from './Button.module.scss';
 import { IButtonProps } from './Button.types';
-export const Button: React.FC<IButtonProps> = ({ type, children, onClick, isDisabled }) => {
+export const Button: React.FC<IButtonProps> = ({
+  type,
+  children,
+  onClick = () => {},
+  onMouseOver = () => {},
+  onMouseOut = () => {},
+  isDisabled,
+}) => {
   return (
     <button
       className={style[type]}
-      onClick={onClick ? () => onClick() : () => {}}
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
+      onClick={onClick}
       disabled={isDisabled}>
       {children}
     </button>

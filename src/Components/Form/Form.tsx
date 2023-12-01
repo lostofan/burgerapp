@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { Input } from '../Input/Input';
 import { Button } from '../Button';
 import style from './Form.module.scss';
-import phone from '../../Assets/imgs/phone.svg';
-import name from '../../Assets/imgs/name.svg';
-import shipping from '../../Assets/imgs/shipping.svg';
+import phone from '../../Assets/imgs/modal/phone.svg';
+import name from '../../Assets/imgs/modal/name.svg';
+import address from '../../Assets/imgs/modal/shipping.svg';
 
 export const Form = () => {
   const [credentials, setCredentials] = useState({ name: '', phone: '', address: '', time: '' });
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    alert(credentials);
+  };
   return (
-    <form className={style.root} onSubmit={() => alert('send')}>
+    <form className={style.root} onSubmit={(e) => handleSubmit(e)}>
       <div className={style.inputs}>
         <Input
           label="name"
@@ -33,7 +37,7 @@ export const Form = () => {
           label="address"
           type="address"
           placeholder="Enter address"
-          icon={shipping}
+          icon={address}
           input={credentials}
           setInput={setCredentials}>
           Shipping Address

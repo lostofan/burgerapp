@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+.root {
+  z-index: 900;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(82, 67, 194, 0.9);
+  position: fixed;
+  left: 0;
+  top: 0;
+  .container {
+    max-width: 608px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 20px;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid $primtitan;
+      margin-bottom: 10px;
+      padding: 16px;
+      @include font(24px, 600, $primblack);
+    }
+  }
+}

@@ -1,14 +1,22 @@
-@import '../../../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .root {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 25px;
     margin-bottom: 25px;
-    height: 600px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .root {
+    .container {
+      flex-direction: column;
+    }
   }
 }

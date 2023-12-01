@@ -2,15 +2,25 @@
 .root {
   position: absolute;
   bottom: -20px;
-  right: -200px;
+  left: 0;
   z-index: 800;
   flex-direction: row;
-
   display: none;
   align-items: center;
   user-select: none;
-  @include font(1rem, 600, $primblack);
+  @include font(14px, 600, $primblack);
   .message {
     color: $primdanger;
+  }
+  .icon {
+    max-width: 100px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .root {
+    flex-direction: column;
+    .icon {
+      order: -1;
+    }
   }
 }

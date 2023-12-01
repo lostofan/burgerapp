@@ -1,27 +1,20 @@
 import React, { FC } from 'react';
 import { IPickerItemProps } from './PickerItem.type';
 import style from './PickerItem.module.scss';
-import { addIngCounter, subIngCounter } from '../../redux/ingridientCounterSlice';
-import { useAppDispatch, useAppSelector } from '../../redux/hook';
 import { Button } from '../Button';
+import { firstLetterToUpperCase } from '../Utils/firstLetterToUppercase';
+import { usePicker } from '../../Hooks/usePicker';
 
 export const PickerItem: FC<IPickerItemProps> = ({ name, icon, counter, oz, kcal, price }) => {
-  const dispatch = useAppDispatch();
-  const firstLetterToUpperCase = (string: string) => {
-    const result = string.charAt(0).toUpperCase() + name.slice(1);
-    return result;
-  };
-  const isFinished = useAppSelector((state) => state.ingCounter.isFinished);
+  const { addIngridient, subIngridient, isFinished } = usePicker();
   return (
     <div className={style.root}>
       <div className={style.icon}>
-        <img src={require(`../../Assets/imgs/${icon}`)} alt="" />
+        <img src={require(`../../Assets/imgs/picker/${icon}`)} alt="" />
       </div>
       <span className={style.title}>{firstLetterToUpperCase(name)}</span>
       <div className={style.control}>
-        <Button
-          type="picker"
-          onClick={() => dispatch(subIngCounter({ counter, name, oz, kcal, price }))}>
+        <Button type="picker" onClick={() => subIngridient({ counter, name, oz, kcal, price })}>
           <svg
             width="12"
             height="2"
@@ -41,7 +34,7 @@ export const PickerItem: FC<IPickerItemProps> = ({ name, icon, counter, oz, kcal
         <Button
           type="picker"
           isDisabled={isFinished}
-          onClick={() => dispatch(addIngCounter({ counter, name, oz, kcal, price }))}>
+          onClick={() => addIngridient({ counter, name, oz, kcal, price })}>
           <svg
             width="10"
             height="10"

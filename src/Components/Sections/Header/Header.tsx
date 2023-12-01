@@ -14,10 +14,10 @@ export default function Header() {
   return (
     <header className={style.root}>
       <img src={logo} alt="logo" className={style.logo} />
-      {width > 900 ? <Nav /> : false}
+      {width > 900 && <Nav />}
       <Button type="call">
         <img src={phone} alt="" />
-        Call Me Back
+        {width > 400 && 'Call Me Back'}
       </Button>
       {createPortal(<BurgerMenu menuActive={menuActive} />, document.body)}
       <p className={style.contacts}>1 337 437-87-22</p>

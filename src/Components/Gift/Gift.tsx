@@ -1,15 +1,16 @@
 import React from 'react';
 import style from './Gift.module.scss';
 import { useAppSelector } from '../../redux/hook';
+import { selectCalc } from '../../redux/ingridientCounterSlice';
 
 export const Gift = () => {
-  const giftCheck = useAppSelector((state) => state.ingCounter.calc.priceCount);
+  const { priceCount } = useAppSelector(selectCalc);
   return (
     <div
       className={`${style.root} animate__rotateInDownRight animate__animated`}
-      style={giftCheck >= 7 ? { display: 'flex' } : { display: 'none' }}>
-      <img src={require(`../../Assets/imgs/gift.png`)} alt="" />
+      style={priceCount >= 7 ? { display: 'flex' } : { display: 'none' }}>
       <span className={style.message}>+ Tomato Ketchup</span>
+      <img className={style.icon} src={require(`../../Assets/imgs/gift.png`)} alt="" />
     </div>
   );
 };

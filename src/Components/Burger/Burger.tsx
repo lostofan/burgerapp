@@ -5,9 +5,9 @@ import { useAppSelector } from '../../redux/hook';
 import style from './Burger.module.scss';
 import { Ingridient } from '../Ingridient';
 import { Gift } from '../Gift';
-
+import { selectPickedIngridients } from '../../redux/ingridientCounterSlice';
 export const Burger = () => {
-  const ingridients = useAppSelector((state) => state.ingCounter.arrayFromIngs);
+  const ingridients = useAppSelector(selectPickedIngridients);
   return (
     <div className={style.root}>
       <img className={style.bg} src={bg} alt="" />

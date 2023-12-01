@@ -6,7 +6,7 @@
     align-items: center;
     gap: 60px;
     .listItem {
-      @include font(0.8rem, 400, $primblack);
+      @include font(16px, 400, $primblack);
     }
     .listItem_active {
       font-weight: 600;

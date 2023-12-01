@@ -1,10 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import style from './Title.module.scss';
+import { ITitleProps } from './Title.types';
 
-export const Title = () => {
-  return (
-    <h1 className={style.root}>
-      Make <br /> Your <br /> Burger
-    </h1>
-  );
+export const Title: FC<ITitleProps> = ({ children }) => {
+  return <h1 className={style.root}>{children}</h1>;
 };
